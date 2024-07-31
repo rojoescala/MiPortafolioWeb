@@ -16,7 +16,7 @@ function App() {
               </h1>
               <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
                 I am an enthusiastic learner about frontend technologies. My
-                interests are UI/UX design, movile and web applications. I put all
+                interests are UI/UX design, mobile and web applications. I put all
                 the effort in deliver quality software.
               </p>
             </div>
