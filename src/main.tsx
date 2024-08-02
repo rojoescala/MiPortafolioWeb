@@ -7,16 +7,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './ErrorPage.tsx';
+import ProjectHome from './pages/ProjectHome.tsx';
+import Navbar from './components/Navbar.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Navbar />,
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "/",
+        element: <App/>,
+      },
+      {
         path: "project/:projectName",
-        element: null,
+        element: <ProjectHome />,
       },
     ],
   },
