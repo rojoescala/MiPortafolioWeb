@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'peaks': "url('./assets/stacked-peaks-haikei.svg')",
+        'dark-wood': "url('./assets/dark-wood.jpg')",        
+      }
+    },
   },
   plugins: [],
 }
