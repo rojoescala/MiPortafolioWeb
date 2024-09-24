@@ -1,5 +1,4 @@
 import { useLocation, useParams } from "react-router-dom"
-import Carousel from "../components/Carousel"
 import { useEffect } from "react";
 
 const ScrollToTop = () => {
@@ -149,7 +148,7 @@ function ProjectHome() {
                 "JavaScript",
                 "Tailwind CSS"
             ],
-            conclusion: "These landing pages serve providing essential information while utilizing modern web technologies."
+            conclusion: "These landing pages serve providing essential information and enhancing user engagement while utilizing modern web technologies."
         }
     ]
 
