@@ -55,11 +55,11 @@ function App() {
   },
   {
     id: 7,
-    title: "Segutienda Administrator",
+    title: "Segutienda Manager",
     subtitle: "React, MUI & TSX",
-    body: "Developed an administrator app (CRUD) for a current insurance shop with Material UI.",
+    body: "Developed a manager app (CRUD) for a current insurance shop with Material UI.",
     image: null,
-    root: "segutiendadmin"
+    root: "segutiendamanager"
   },
   {
     id: 7,
@@ -74,12 +74,12 @@ function App() {
     <>
       <div className="h-screen">
         <section className="flex items-start justify-center h-screen">
-          <div className="flex max-w-screen-xl px-4 m-auto gap-16  grid-cols-12 items-center justify-center mt-32">
+          <div className="flex max-w-screen-xl px-4 m-auto gap-16  grid-cols-12 items-center justify-center">
             <div className="mr-auto place-self-center col-span-7">
               <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
                 Hi my name is Roberto Escalante
               </h1>
-              <p className="max-w-2xl mb-6 font-light text-gray-100 lg:mb-8 md:text-lg lg:text-xl">
+              <p className="max-w-2xl font-light text-gray-100 md:text-lg lg:text-xl text-justify">
                 I am an enthusiastic learner about frontend technologies. My
                 interests are UI/UX design, mobile and web applications. I put all
                 the effort in deliver quality software.
@@ -87,7 +87,7 @@ function App() {
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex text-center mx-auto shadow-lg">
               <div className="px-2 py- w-96 py-5 bg-white bg-contain rounded-3xl bg-opacity-25 shadow-lg backdrop-blur border-4 border-black">
-                <img src={rojoImg} className='w-full h-96 m-auto object-contain rounded-full border-0 border-black' alt="me" />
+                <img src={rojoImg} className='w-full h-96 m-auto object-contain rounded-full' alt="me" />
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ function App() {
             </div>
             <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
               {projectList.map((project) => (
-                <Link to={`/project/${project.root}`}>
+                <Link to={`project/${project.root}`}>
                   <div className="items-center rounded-lg sm:flex bg-dark-wood bg-cover text-gray-50 shadow-lg hover:grayscale border-4 border-black" key={project.id}>
                     <a href="#">
                       <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" fill="currentColor" className="bi bi-browser-chrome object-fit m-16" viewBox="0 0 16 16">
@@ -113,7 +113,7 @@ function App() {
                         <a href="#">{project.title}</a>
                       </h3>
                       <span>{project.subtitle}</span>
-                      <p className="mt-3 mb-4 font-light">{project.body}</p>
+                      <p className="mt-3 mb-4 font-light text-justify">{project.body}</p>
                     </div>
                   </div>
                 </Link>
