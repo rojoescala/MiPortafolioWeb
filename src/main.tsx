@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './ErrorPage.tsx';
 import ProjectHome from './pages/ProjectHome.tsx';
 import Navbar from './components/Navbar.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Navbar />,
