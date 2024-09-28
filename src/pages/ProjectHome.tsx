@@ -159,7 +159,7 @@ function ProjectHome() {
                 <div>
                     <section className="text-justify">
                         <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                            <p className="my-12 font-extrabold leading-none text-4xl text-white">{project.name}</p>
+                            <p className="mt-16 mb-8 font-extrabold leading-none text-4xl text-white">{project.name}</p>
 
                             <dl>
                                 <dt className="mb-2 font-semibold leading-none text-white">Project Overview</dt>

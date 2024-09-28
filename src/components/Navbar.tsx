@@ -1,6 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import logo from '../assets/LogoRJ.png'
+import Modal from "./Modal";
+import Contact from "../Contact";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +10,10 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const toggleModal = () => setModalOpen(prev => !prev)
 
     return (
         <>
@@ -28,7 +34,7 @@ const Navbar = () => {
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <div className={`w-full md:block md:w-auto ${isOpen ? "block border-t-4 mt-4 border-yellow-900" : "hidden"}`} id="navbar-default">
+                    <div className={`w-full md:block md:w-auto sm:border-0 border-t-4 mt-4 border-yellow-900 ${isOpen ? "block" : "hidden"}`} id="navbar-default">
                         <ul className="font-medium flex flex-col md:flex-row p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x md:mt-0 md:border-0 md:justify-center w-full">
                             <li className="flex justify-center w-full">
                                 <Link to={`/`} className="flex items-center py-2 px-2 bg-transparent border-0 text-white hover:text-yellow-800">
@@ -40,7 +46,7 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li className="flex justify-center w-full">
-                                <a href="#" className="flex items-center py-2 px-2 bg-transparent border-0 text-white hover:text-yellow-800">
+                                <a href="#" onClick={toggleModal} className="flex items-center py-2 px-2 bg-transparent border-0 text-white hover:text-yellow-800">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-plus-fill mx-2" viewBox="0 0 16 16">
                                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                         <path fillRule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
@@ -53,6 +59,9 @@ const Navbar = () => {
                 </div>
             </nav>
             <Outlet />
+            <Modal isOpen={isModalOpen} onToggle={toggleModal}>
+                <Contact/>
+            </Modal>
         </>
     );
 }

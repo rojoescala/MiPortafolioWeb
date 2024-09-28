@@ -3,7 +3,6 @@ import './App.css'
 import rojoImg from "./assets/me.jpg"
 import { Link } from 'react-router-dom'
 
-
 function App() {
 
   const projectList = [{
@@ -107,7 +106,7 @@ function App() {
               </p>
             </div>
             <div className="my-0 sm:mt-4 flex justify-center w-full sm:w-1/3">
-              <div className="sm:px-2 sm:py-5 p-4 w-60 sm:w-96 bg-white bg-contain sm:rounded-3xl rounded-full bg-opacity-20 backdrop-blur border-4 border-black">
+              <div className="sm:px-2 sm:py-5 p-4 w-60 sm:w-96 bg-white bg-contain sm:rounded-3xl rounded-full bg-opacity-20 backdrop-blur sm:border-4 border border-black">
                 <img src={rojoImg} className='w-full h-52 sm:h-96 sm:object-contain object-cover rounded-full' alt="me" />
               </div>
             </div>
@@ -120,7 +119,7 @@ function App() {
               <p className="font-light lg:mb-16 sm:text-xl text-gray-100">
                 I introduce the projects I been workin on:</p>
             </div>
-            <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+            <div className="grid gap-8 mb-6 lg:mb-16 xl:grid-cols-2">
               {displayedProjects.map((project) => (
                 <Link to={`project/${project.root}`}>
                   <div key={project.id} className="items-center h-52 rounded-xl sm:flex bg-white bg-contain text-gray-100 hover:text-white bg-opacity-20 hover:bg-gray-400 hover:bg-opacity-10 backdrop-blur border-4 border-black">
@@ -168,7 +167,7 @@ function App() {
               )}
             </div>
           </div>
-        </section>
+        </section>       
       </div>
     </>
   )
