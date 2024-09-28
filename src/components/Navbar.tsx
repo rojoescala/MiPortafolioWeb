@@ -28,7 +28,7 @@ const Navbar = () => {
                         </svg>
                     </button>
                     <div className={`w-full md:block md:w-auto ${isOpen ? "block" : "hidden"}`} id="navbar-default">
-                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x md:mt-0 md:border-0">
                             <li>
                                 <Link to={`/`} className="flex items-center py-2 px-2 bg-transparent border-0 text-white hover:text-yellow-800">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-fill mx-2" viewBox="0 0 16 16">

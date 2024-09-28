@@ -22,7 +22,7 @@ function App() {
     body: "Created adaptable, dynamic and configurable components in React as a library (CMS) with documentation using Storybook.",
     image: null,
     root: "library",
-    initials: "CL"
+    initials: "SCL"
   },
   {
     id: 3,
@@ -70,14 +70,14 @@ function App() {
     initials: "SM"
   },
   {
-    id: 7,
+    id: 8,
     title: "Segutienda Client",
     subtitle: "React, MUI & TSX",
     body: "Developed an administrator app for a current insurance shop, and applied changes to the app based in the administrator.",
     image: null,
     root: "segutiendaclient",
-    initials: "ST"
-  }]
+    initials: "SC"
+  },]
 
   const [visibleCount, setVisibleCount] = useState(4)
 
@@ -97,18 +97,18 @@ function App() {
         <section className="flex items-start justify-center h-screen">
           <div className="flex flex-col sm:flex-row max-w-screen-3xl grid-cols-12 px-4 m-auto gap-16 items-center justify-center">
             <div className="mr-auto place-self-center col-span-7">
-              <h1 className="max-w-2xl mb-4 font-extrabold tracking-tight leading-none text-4xl xl:text-6xl text-white">
+              <h1 className="max-w-2xl mb-4 font-extrabold tracking-tight  sm:text-left text-center leading-none text-4xl xl:text-6xl text-white">
                 Hi, my name is Roberto Escalante
               </h1>
-              <p className="max-w-2xl font-light text-gray-100 md:text-lg lg:text-xl text-justify">
+              <p className="max-w-2xl font-light text-gray-100 md:text-lg lg:text-xl text-center sm:text-justify">
                 I am an enthusiastic learner about frontend technologies. My
                 interests are UI/UX design, mobile and web applications. I put all
                 the effort in delivering quality software.
               </p>
             </div>
-            <div className="mt-4 sm:mt-0 flex justify-center w-full sm:w-1/3">
-              <div className="px-2 py-5 w-60 sm:w-96 bg-white bg-contain rounded-3xl bg-opacity-20 backdrop-blur border-4 border-black">
-                <img src={rojoImg} className='w-full h-52 sm:h-96 object-contain rounded-full' alt="me" />
+            <div className="my-0 sm:mt-4 flex justify-center w-full sm:w-1/3">
+              <div className="sm:px-2 sm:py-5 p-4 w-60 sm:w-96 bg-white bg-contain sm:rounded-3xl rounded-full bg-opacity-20 backdrop-blur border-4 border-black">
+                <img src={rojoImg} className='w-full h-52 sm:h-96 sm:object-contain object-cover rounded-full' alt="me" />
               </div>
             </div>
           </div>
@@ -116,9 +116,9 @@ function App() {
         <section>
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
             <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-              <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-white">Projects</h2>
+              <h2 className="mb-4 sm:text-5xl text-3xl tracking-tight font-extrabold text-white">Projects</h2>
               <p className="font-light lg:mb-16 sm:text-xl text-gray-100">
-                This are some of the projects i been working...</p>
+                I introduce the projects I been workin on:</p>
             </div>
             <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
               {displayedProjects.map((project) => (
