@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import rojoImg from "./assets/me.jpg"
 import { Link } from 'react-router-dom'
@@ -11,7 +12,8 @@ function App() {
     subtitle: "React, TSX & Vite",
     body: "Currently developing a web application about insurance, bails and statistics using React, TS and Vite.",
     image: null,
-    root: "kwall360"
+    root: "kwall360",
+    initials: "KW"
   },
   {
     id: 2,
@@ -19,7 +21,8 @@ function App() {
     subtitle: "React, JSX & Storybook",
     body: "Created adaptable, dynamic and configurable components in React as a library (CMS) with documentation using Storybook.",
     image: null,
-    root: "library"
+    root: "library",
+    initials: "CL"
   },
   {
     id: 3,
@@ -27,7 +30,8 @@ function App() {
     subtitle: "React",
     body: "Migrated web application developed in AngularJS to React applying our own components library.",
     image: null,
-    root: "kerno2"
+    root: "kerno2",
+    initials: "K2"
   },
   {
     id: 4,
@@ -35,7 +39,8 @@ function App() {
     subtitle: "React & JSX",
     body: "Designed and developed the frontend of a web application car insurance quotes using React",
     image: null,
-    root: "insurancehub"
+    root: "insurancehub",
+    initials: "IH"
   },
   {
     id: 5,
@@ -43,7 +48,8 @@ function App() {
     subtitle: "Ionic",
     body: "Applied requirement updates of mobile application for Ultramar company with Ionic",
     image: null,
-    root: "ultraplan"
+    root: "ultraplan",
+    initials: "UP"
   },
   {
     id: 6,
@@ -51,7 +57,8 @@ function App() {
     subtitle: "HTML, CSS & JS",
     body: "Attended design of landing pages for Andrea boutique, SportsWorld, Nexus Tours, Amstar and others using HTML, CSS and JS.",
     image: null,
-    root: "lp"
+    root: "lp",
+    initials: "LP"
   },
   {
     id: 7,
@@ -59,7 +66,8 @@ function App() {
     subtitle: "React, MUI & TSX",
     body: "Developed a manager app (CRUD) for a current insurance shop with Material UI.",
     image: null,
-    root: "segutiendamanager"
+    root: "segutiendamanager",
+    initials: "SM"
   },
   {
     id: 7,
@@ -67,27 +75,40 @@ function App() {
     subtitle: "React, MUI & TSX",
     body: "Developed an administrator app for a current insurance shop, and applied changes to the app based in the administrator.",
     image: null,
-    root: "segutiendaclient"
-  },]
+    root: "segutiendaclient",
+    initials: "ST"
+  }]
+
+  const [visibleCount, setVisibleCount] = useState(4)
+
+  const loadMoreProjects = () => {
+    setVisibleCount(prevCount => prevCount + 4)
+  }
+
+  const loadLessProjects = () => {
+    setVisibleCount(prevCount => Math.max(prevCount - 4, 4))
+  }
+
+  const displayedProjects = projectList.slice(0, visibleCount);
 
   return (
     <>
       <div className="h-screen">
         <section className="flex items-start justify-center h-screen">
-          <div className="flex max-w-screen-xl px-4 m-auto gap-16  grid-cols-12 items-center justify-center">
+          <div className="flex flex-col sm:flex-row max-w-screen-3xl grid-cols-12 px-4 m-auto gap-16 items-center justify-center">
             <div className="mr-auto place-self-center col-span-7">
-              <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
-                Hi my name is Roberto Escalante
+              <h1 className="max-w-2xl mb-4 font-extrabold tracking-tight leading-none text-4xl xl:text-6xl text-white">
+                Hi, my name is Roberto Escalante
               </h1>
               <p className="max-w-2xl font-light text-gray-100 md:text-lg lg:text-xl text-justify">
                 I am an enthusiastic learner about frontend technologies. My
                 interests are UI/UX design, mobile and web applications. I put all
-                the effort in deliver quality software.
+                the effort in delivering quality software.
               </p>
             </div>
-            <div className="hidden lg:mt-0 lg:col-span-5 lg:flex text-center mx-auto shadow-lg">
-              <div className="px-2 py- w-96 py-5 bg-white bg-contain rounded-3xl bg-opacity-25 shadow-lg backdrop-blur border-4 border-black">
-                <img src={rojoImg} className='w-full h-96 m-auto object-contain rounded-full' alt="me" />
+            <div className="mt-4 sm:mt-0 flex justify-center w-full sm:w-1/3">
+              <div className="px-2 py-5 w-60 sm:w-96 bg-white bg-contain rounded-3xl bg-opacity-20 backdrop-blur border-4 border-black">
+                <img src={rojoImg} className='w-full h-52 sm:h-96 object-contain rounded-full' alt="me" />
               </div>
             </div>
           </div>
@@ -95,19 +116,20 @@ function App() {
         <section>
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
             <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">Projects</h2>
+              <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-white">Projects</h2>
               <p className="font-light lg:mb-16 sm:text-xl text-gray-100">
                 This are some of the projects i been working...</p>
             </div>
             <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-              {projectList.map((project) => (
+              {displayedProjects.map((project) => (
                 <Link to={`project/${project.root}`}>
-                  <div className="items-center rounded-lg sm:flex bg-dark-wood bg-cover text-gray-50 shadow-lg hover:grayscale border-4 border-black" key={project.id}>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" fill="currentColor" className="bi bi-browser-chrome object-fit m-16" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
-                      </svg>
-                    </a>
+                  <div key={project.id} className="items-center h-52 rounded-xl sm:flex bg-white bg-contain text-gray-100 hover:text-white bg-opacity-20 hover:bg-gray-400 hover:bg-opacity-10 backdrop-blur border-4 border-black">
+                    <div className="hidden sm:block">
+                      <span className="font-medium text-4xl rounded-full text-black m-16 border-2 border-white bg-white/90 w-24 h-24 flex items-center justify-center">
+                        {project.initials}
+                      </span>
+                    </div>
+
                     <div className="p-5">
                       <h3 className="text-xl font-bold tracking-tight text-white">
                         <a href="#">{project.title}</a>
@@ -118,6 +140,32 @@ function App() {
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="flex">
+              {visibleCount < projectList.length && (
+                <div className="relative flex flex-col items-center mx-auto group">
+                  <button onClick={loadMoreProjects} className='text-white hover:text-yellow-800 flex mx-auto animate-bounce'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-arrow-down-circle-fill mx-2" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                    </svg>
+                  </button>
+                  <span className="w-32 text-center absolute left-1/2 transform -translate-x-1/2 translate-y-10 text-gray-100 text-sm p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Show more (+)
+                  </span>
+                </div>
+              )}
+              {visibleCount > 4 && (
+                <div className="relative flex flex-col items-center mx-auto group">
+                  <button onClick={loadLessProjects} className='text-white hover:text-yellow-800 flex mx-auto animate-bounce'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+                    </svg>
+                  </button>
+                  <span className="w-32 text-center absolute left-1/2 transform -translate-x-1/2 translate-y-10 text-gray-100 text-sm p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Show less (-)
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </section>

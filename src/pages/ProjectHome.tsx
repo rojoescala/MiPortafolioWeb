@@ -159,11 +159,11 @@ function ProjectHome() {
                 <div>
                     <section className="text-justify">
                         <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                            <p className="my-8 font-extrabold leading-none text-4xl text-white">{project.name}</p>
+                            <p className="my-12 font-extrabold leading-none text-4xl text-white">{project.name}</p>
 
                             <dl>
-                                <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Project Overview</dt>
-                                <dd className="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
+                                <dt className="mb-2 font-semibold leading-none text-white">Project Overview</dt>
+                                <dd className="mb-4 font-light sm:mb-5 text-gray-300">
                                     {project.overview}
                                 </dd>
                             </dl>
@@ -175,8 +175,8 @@ function ProjectHome() {
                             */}
 
                             <dl>
-                                <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Technology Stack</dt>
-                                <dd className="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
+                                <dt className="mb-2 font-semibold leading-none text-white">Technology Stack</dt>
+                                <dd className="mb-4 font-light text-gray-300 sm:mb-5">
                                     {project.name} is developed using a modern technology stack that includes:
                                     <ul className="list-disc mx-5">
                                         {project.stack.map((item, index) => (
@@ -187,8 +187,8 @@ function ProjectHome() {
                             </dl>
 
                             <dl>
-                                <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Project Features</dt>
-                                <dd className="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
+                                <dt className="mb-2 font-semibold leading-none text-white">Project Features</dt>
+                                <dd className="mb-4 font-light text-gray-300 sm:mb-5">
                                     <ul className="list-disc mx-5">
                                         {project.features.map((feature, index) => (
                                             <li key={index}>{feature}</li>
@@ -198,8 +198,8 @@ function ProjectHome() {
                             </dl>
 
                             <dl>
-                                <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Conclusion</dt>
-                                <dd className="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
+                                <dt className="mb-2 font-semibold leading-none text-white">Conclusion</dt>
+                                <dd className="mb-4 font-light text-gray-300 sm:mb-5">
                                     {project.conclusion}
                                 </dd>
                             </dl>
