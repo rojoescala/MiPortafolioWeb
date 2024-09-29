@@ -117,7 +117,7 @@ function App() {
             <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
               <h2 className="mb-4 sm:text-5xl text-3xl tracking-tight font-extrabold text-white">Projects</h2>
               <p className="font-light lg:mb-16 sm:text-xl text-gray-100">
-                I introduce the projects I been workin on:</p>
+                I introduce the projects I been working on:</p>
             </div>
             <div className="grid gap-8 mb-6 lg:mb-16 xl:grid-cols-2">
               {displayedProjects.map((project) => (
