@@ -28,7 +28,7 @@ function ProjectHome() {
             stack: [
                 "React: For building a dynamic and responsive user interface.",
                 "TypeScript (TSX): Ensuring type safety and enhancing code maintainability.",
-                "Tailwind CSS: Allowing us to create a custom, responsive design with minimal overhead."
+                "Tailwind CSS: Allows to create a custom, responsive design with minimal overhead."
             ],
             conclusion: "KernoWall 360 represents a significant advancement in how users interact with insurance and financial products."
         },
@@ -43,8 +43,8 @@ function ProjectHome() {
                 "Fleet Management: For businesses with multiple vehicles, InsuranceHub offers a dedicated module for fleet management, enabling bulk quoting and policy management.",
             ],
             stack: [
-                "React: The choice of React as our primary front-end library facilitates the creation of a dynamic and responsive user interface. Its component-based architecture allows for reusability and efficient updates.",
-                "JSX: Utilizing JSX enables us to write HTML-like syntax within JavaScript, improving the readability and maintainability of our codebase. This integration supports a smooth development workflow.",
+                "React: The choice of React facilitates the creation of a dynamic and responsive user interface. Its component-based architecture allows for reusability and efficient updates.",
+                "JSX: Utilizing JSX enables to write HTML-like syntax within JavaScript, improving the readability and maintainability of our codebase. This integration supports a smooth development workflow.",
                 "Bootstrap: We implemented Bootstrap for its powerful front-end framework, which helps us achieve a consistent and visually appealing design across all devices. This ensures a mobile-first approach that caters to our users' needs."
             ],
             conclusion: "InsuranceHub stands out as a robust solution for auto insurance quoting and issuance. The project exemplifies modern web development and demonstrates commitment to delivering high-quality, user-centric applications."
@@ -60,7 +60,7 @@ function ProjectHome() {
                 "Personalization: UltraPlan offers customizable settings that enable users to tailor their experience based on individual preferences and usage patterns.",
             ],
             stack: [
-                "Ionic: Leveraging Ionic for this project allows us to create a cross-platform mobile application that delivers a native-like experience on both iOS and Android devices. This framework enables rapid development and deployment, ensuring timely updates and feature enhancements.",
+                "Ionic: Leveraging Ionic for this project allows to create a cross-platform mobile application that delivers a native-like experience on both iOS and Android devices. This framework enables rapid development and deployment, ensuring timely updates and feature enhancements.",
                 "Angular: The application is built using Angular, which provides a robust structure for building dynamic single-page applications. This choice enhances performance and maintainability, allowing for the creation of responsive and engaging user interfaces.",
                 "Capacitor: We utilized Capacitor to bridge the gap between web and native functionalities, enabling access to device features."
             ],
@@ -76,7 +76,7 @@ function ProjectHome() {
                 "User-Friendly Interface: The application is designed with an intuitive layout that enhances navigation and accessibility, ensuring a smooth experience for all users."                
             ],
             stack: [
-                "React: Utilizing React allows us to create a dynamic and responsive user interface, with components that facilitate efficient updates and reusability across the application.",
+                "React: Utilizing React allows to create a dynamic and responsive user interface, with components that facilitate efficient updates and reusability across the application.",
                 "TSX: The integration of TypeScript with JSX (TSX) enhances the development process by providing static type checking, improving code quality and maintainability.",
                 "Tailwind CSS: We chose Tailwind CSS for its utility-first approach to styling, enabling rapid design iterations and a highly customizable user interface that meets modern design standards."
             ],
@@ -95,7 +95,7 @@ function ProjectHome() {
             stack: [
                 "React: By using React, we achieve a responsive and dynamic user interface that enhances the overall user experience through efficient component rendering.",
                 "TSX: The incorporation of TypeScript with JSX (TSX) provides robust type checking and improves code maintainability, reducing the likelihood of runtime errors.",
-                "Material-UI (MUI): Leveraging MUI allows us to utilize a comprehensive set of pre-designed components that adhere to Material Design principles, facilitating rapid development and a polished user interface."
+                "Material-UI (MUI): Leveraging MUI allows to utilize a comprehensive set of pre-designed components that adhere to Material Design principles, facilitating rapid development and a polished user interface."
             ],
             conclusion: "Segutienda Administrador is an essential tool for managing the Segutienda platform, offering a user-friendly interface and powerful features that streamline administrative tasks. The combination of React, TSX, and Material-UI ensures a high-quality, maintainable application that enhances the overall efficiency of operations."
         },
@@ -121,13 +121,13 @@ function ProjectHome() {
             root: "kerno2",
             name: "Kerno 2",
             images: [],
-            overview: "I am excited to present Kerno 2, a boilerplate application built with React and TSX that serves as a foundational framework for deploying user interfaces utilizing the Sekura Components Library. This project is designed to facilitate rapid application development by seamlessly integrating dynamic components through service consumption.",
+            overview: "Kerno 2 is a boilerplate application built with React and TSX that serves as a foundational framework for deploying user interfaces utilizing the Sekura Components Library. This project is designed to facilitate rapid application development by seamlessly integrating dynamic components through service consumption.",
             features: [
                 "Component Integration: The boilerplate allows for straightforward integration of Sekura components, enabling developers to construct complex user interfaces quickly and efficiently.",
                 "Service Consumption: Kerno 2 is designed to interact with various backend services, facilitating data retrieval and ensuring that the user interface is dynamic and responsive to real-time data changes.",                
             ],
             stack: [
-                "React: Leveraging React allows us to create a responsive and interactive user experience, while also enabling efficient state management and component lifecycle handling.",
+                "React: Leveraging React allows to create a responsive and interactive user experience, while also enabling efficient state management and component lifecycle handling.",
                 "TSX: The use of TypeScript with JSX (TSX) enhances type safety and maintainability, ensuring high code quality and reducing the likelihood of runtime errors."
             ],
             conclusion: "Kerno 2 serves as an essential boilerplate for developers looking to build applications that leverage the Sekura Components Library. Kerno 2 accelerates the development process and promotes best practices."
